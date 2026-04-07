@@ -1,0 +1,27 @@
+------------- HelloController ---------------
+http://localhost:8080/hello
+http://localhost:8080/hello?name=Java
+
+
+------------- FileController ---------------
+
+Testing (Postman)
+Upload:
+	POST http://localhost:8080/uploader
+	Body → form-data:
+	fileGroup = certificates
+	files = (multiple files) ( change the dropdown end of key param - Text to File
+
+Download:
+	GET http://localhost:8080/downloader?fileGroup=certificates
+
+The API returns binary data with Content-Disposition header. Clients like browsers download it directly, while tools like Postman may display raw bytes unless explicitly downloaded.
+How to properly download in Postman:
+	1.	After clicking Send: Click "Save Response" (right side)
+	2.	Click the small arrow next to Send:Send and Download
+
+
+Explore h2 DB
+
+http://localhost:8080/h2-console
+SELECT * FROM XFILE;
