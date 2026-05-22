@@ -1,6 +1,8 @@
 package com.nishchay.file.controller;
 
 import com.nishchay.file.service.HelloService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +17,9 @@ public class HelloController {
     }
 
     @GetMapping("/hello")
-    public String hello(@RequestParam(defaultValue = "World") String name) {
-        return helloService.sayHello(name);
+    public ResponseEntity<?> hello(@RequestParam(defaultValue = "World") String name) {
+        String updatedName =  helloService.sayHello(name);
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(updatedName);
     }
 }
