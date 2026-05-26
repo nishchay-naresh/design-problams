@@ -1,4 +1,4 @@
-package com.nishchay.user_api;
+package com.nishchay;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

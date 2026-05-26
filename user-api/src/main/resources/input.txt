@@ -1,0 +1,12 @@
+
+POST, http://localhost:8080/users
+
+{
+  "name": "Nishchay",
+  "age": 28,
+  "salary": 85000,
+  "city": "Bangalore"
+}
+
+GET, http://localhost:8080/users/1
+

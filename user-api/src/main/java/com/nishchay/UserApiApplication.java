@@ -1,4 +1,4 @@
-package com.nishchay.user_api;
+package com.nishchay;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
