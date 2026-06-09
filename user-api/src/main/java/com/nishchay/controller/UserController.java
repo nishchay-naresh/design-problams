@@ -2,6 +2,7 @@ package com.nishchay.controller;
 
 import com.nishchay.pojo.User;
 import com.nishchay.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,6 +11,8 @@ import java.util.List;
 @RequestMapping("/users")
 public class UserController {
 
+
+    @Autowired
     private final UserService userService;
 
     public UserController(UserService userService) {
